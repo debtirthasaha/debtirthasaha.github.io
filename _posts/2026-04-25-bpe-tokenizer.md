@@ -2,7 +2,7 @@
 layout: post
 title: "BPE from scratch, and why your LLM can't count L's"
 date: 2026-04-25 10:00:00
-description: Byte-pair encoding implemented in pure Python. Plus: SolidGoldMagikarp, the encode/decode asymmetry, and a list of LLM weirdness all caused by the tokenizer.
+description: "Byte-pair encoding implemented in pure Python. Plus SolidGoldMagikarp, the encode/decode asymmetry, and a list of LLM weirdness all caused by the tokenizer."
 tags: tokenization bpe gpt
 categories: nlp
 giscus_comments: false
