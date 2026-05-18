@@ -22,4 +22,4 @@ latest_posts:
   limit: 6
 ---
 
-Notes on ML systems I've built from scratch. Each post is a writeup of one project — the architecture, the numbers, the bugs.
+Implementation writeups for neural networks built from the ground up. One project per post — the architecture, the bug that took longest to find, and the number at the end.

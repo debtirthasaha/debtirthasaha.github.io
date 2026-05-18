@@ -91,7 +91,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: notes
-blog_description: writeups of projects I've built from scratch
+blog_description: one project per post — architecture, bugs, numbers
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
