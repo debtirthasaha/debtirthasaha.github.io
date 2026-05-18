@@ -219,4 +219,4 @@ This is the exact category the cheatsheet warns about: a tree-walking error on t
 
 ## Apply the procedure to this instance
 
-The submission file ends with the actual placeholder block the harness substitutes into. The full cheatsheet is up at [github.com/debtirthasaha](https://github.com/debtirthasaha).
+The submission file ends with the actual placeholder block the harness substitutes into. The full cheatsheet, the Qwen 2.5 7B sanity-check results, and the verification scripts are at [github.com/debtirthasaha/equational-theories-cheatsheet](https://github.com/debtirthasaha/equational-theories-cheatsheet).

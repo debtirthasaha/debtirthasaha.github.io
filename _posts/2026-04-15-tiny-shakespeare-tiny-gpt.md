@@ -207,4 +207,4 @@ This is GPT-2's architecture at small scale. The pieces *not* in this build:
 
 All of those show up in the [GPT-2 reproduction]({% post_url 2026-05-17-gpt2-124m %}).
 
-Code: [github.com/debtirthasaha](https://github.com/debtirthasaha).
+Code: [github.com/debtirthasaha/tiny-gpt-shakespeare](https://github.com/debtirthasaha/tiny-gpt-shakespeare).

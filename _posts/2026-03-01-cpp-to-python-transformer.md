@@ -262,4 +262,4 @@ Other heads in the same layer attend differently (some local, some diagonal, som
 - **Bigger model** if you have the VRAM. `d_model=512` and 6 layers is the standard small-transformer scale, but doesn't fit at `T=350` on 4 GB.
 - **Beam search** at decode time. Greedy is fine for code but a beam of 4 reliably picks better completions for long sequences.
 
-Code: [github.com/debtirthasaha](https://github.com/debtirthasaha). The 16 numbered tests in `test_step*.py` build up each of the 12 components in isolation before the full model is assembled.
+Code: [github.com/debtirthasaha/cpp-to-python-transformer](https://github.com/debtirthasaha/cpp-to-python-transformer). The 16 numbered tests in `test_step*.py` build up each of the 12 components in isolation before the full model is assembled. Trained checkpoint (189 MB) is on Hugging Face at [debtirthasaha/cpp-to-python-transformer](https://huggingface.co/debtirthasaha/cpp-to-python-transformer).

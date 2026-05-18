@@ -135,4 +135,4 @@ for k in range(50):
 
 PyTorch operates on tensors and broadcasts the same chain rule across millions of elements per op. The math is identical; tensor ops just batch it. Once the scalar engine works, the upgrade to a tensor engine is engineering, not concept.
 
-Code: [github.com/debtirthasaha/micrograd](https://github.com/debtirthasaha).
+Code: [github.com/debtirthasaha/micrograd-from-scratch](https://github.com/debtirthasaha/micrograd-from-scratch).

@@ -307,4 +307,4 @@ Same data, different format, different token count. JSON has overhead from `{`, 
 | 9 | Tokenizer dataset ≠ LM dataset | SolidGoldMagikarp glitch tokens | same datasets, audit activations |
 | 10 | `encode(decode(x)) == x` assumption | silent breakage | only `decode(encode(x))` is safe |
 
-Code: [github.com/debtirthasaha](https://github.com/debtirthasaha). Reference: [karpathy/minbpe](https://github.com/karpathy/minbpe).
+Code: [github.com/debtirthasaha/bpe-tokenizer](https://github.com/debtirthasaha/bpe-tokenizer). Reference: [karpathy/minbpe](https://github.com/karpathy/minbpe).
