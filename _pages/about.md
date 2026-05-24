@@ -22,4 +22,6 @@ latest_posts:
   limit: 6
 ---
 
-Implementation writeups for neural networks built from the ground up. One project per post — the architecture, the bug that took longest to find, and the number at the end.
+I reimplement the architectures I want to understand, then write down how it actually went.
+
+[**Resume (PDF)**](/assets/pdf/resume_2026.pdf)

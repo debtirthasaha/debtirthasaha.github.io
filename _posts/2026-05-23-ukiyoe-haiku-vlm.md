@@ -163,6 +163,8 @@ Two lessons fell out of this. First, **KTO is far more sensitive to `λ_U` than 
 
 Run on a dense Western fantasy painting — nothing like ukiyo-e — both models produced coherent, domain-shifted haiku rather than gibberish or refusals:
 
+{% include figure.liquid loading="eager" path="assets/img/ukiyoe-ood.jpg" class="img-fluid rounded z-depth-1" alt="A dense, grotesque Western fantasy painting — crowded faces, masks, and tangled limbs in dark reds and browns — used as an out-of-distribution test image" %}
+
 English (SFT):
 ```
 Lanterns pierce the dark
@@ -187,14 +189,10 @@ Each published "LoRA adapter" is **1.36 GB**, not the ~30 MB you'd expect from r
 
 | Component | Cost |
 |---|---|
-| GPU (RunPod A100 80GB, ~12 hr intermittent) | ~$60 |
+| GPU (RunPod A100 80GB, ~12 hr intermittent) | $16.41 |
 | Anthropic API (EN+JP captions, self-correct traces, judge) | ~$15 |
-| **Total** | **~$75** |
+| **Total** | **~$31** |
 
 The Anthropic spend came in well under estimate: 224×224 images tokenize to ~80 vision tokens (not the 300+ I'd assumed) and haiku outputs are ~30 tokens, so per-call cost was tiny. Wall-clock was dominated by the tier-1 request-per-minute limit, not by tokens or latency.
-
-## Honest framing
-
-This is the LLaVA pattern, not a novel architecture. The model behaves well on ukiyo-e and badly on photos of cats — expected from a narrow-domain LoRA. The Claude-generated captions carry Claude's aesthetic biases (cherry blossoms, the floating world), and the model inherits them; the dataset is the ceiling. ORPO/KTO on a 3B base with ~3,700 pairs is about the realistic floor for a distinguishable preference signal — a bigger LM would help, a bigger and more contrastive dataset would help more.
 
 Code, scripts (English and Japanese variants), and the full lessons writeup: [github.com/debtirthasaha/ukiyoe-haiku-vlm](https://github.com/debtirthasaha/ukiyoe-haiku-vlm). The two models are on Hugging Face — Japanese ORPO (flagship) at [MR0b0t/ukiyoe-haiku-vlm-jp](https://huggingface.co/MR0b0t/ukiyoe-haiku-vlm-jp) and English SFT at [MR0b0t/ukiyoe-haiku-vlm-en](https://huggingface.co/MR0b0t/ukiyoe-haiku-vlm-en).
