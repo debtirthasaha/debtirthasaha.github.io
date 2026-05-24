@@ -23,7 +23,29 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-eight-a100s-61-and-124m-parameters",
+        },{id: "post-a-haiku-vlm-sft-did-the-work-kto-collapsed-at-λ-1-0",
+        
+          title: "A haiku VLM: SFT did the work, KTO collapsed at λ=1.0",
+        
+        description: "A LLaVA-pattern VLM that writes a 5-7-5 haiku for a ukiyo-e woodblock print. SigLIP (frozen) + trained projector + Qwen2.5-3B (LoRA), on 3,913 Met Museum prints, in English and Japanese. SFT delivered ~95% of the lift; preference optimization only helped where the chosen/rejected gap was real; KTO collapsed at its default λ_U.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/ukiyoe-haiku-vlm/";
+          
+        },
+      },{id: "post-a-7b-math-fine-tune-on-8-h100-sft-6-4-dpo-0-6",
+        
+          title: "A 7B math fine-tune on 8× H100: SFT +6.4, DPO +0.6",
+        
+        description: "Two-stage LoRA (SFT then DPO) on DeepSeek-R1-Distill-Qwen-7B, end-to-end on a single 8× H100 pod for ~$93. SFT lifted four math benchmarks by +6.4 pp average; DPO at conservative defaults moved nothing, and the training-time reward margin predicted it.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/math-slm/";
+          
+        },
+      },{id: "post-eight-a100s-61-and-124m-parameters",
         
           title: "Eight A100s, $61, and 124M parameters",
         
@@ -135,14 +157,14 @@ ninja.data = [{
           description: "Scalar-valued autograd engine in ~150 lines of pure Python. Supports +, *, **, tanh, exp, plus a tiny MLP.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_micrograd/";
-            },},{id: "projects-math-slm-in-progress",
-          title: 'Math SLM (in progress)',
-          description: "A 1.5B math-reasoning model. LoRA SFT of DeepSeek-R1-Distill-Qwen-1.5B on teacher-generated CoT data, BoN-32 inference with code voting. Target benchmarks include MathNet (ICLR 2026 text-only 500).",
+            },},{id: "projects-math-slm-sft-dpo",
+          title: 'Math SLM (SFT + DPO)',
+          description: "Two-stage LoRA on DeepSeek-R1-Distill-Qwen-7B. SFT +6.4 pp across four math benchmarks; DPO a config-bottlenecked no-op. End-to-end on 8× H100 for ~$93.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_math_slm/";
-            },},{id: "projects-ukiyo-e-haiku-vlm-planned",
-          title: 'Ukiyo-e Haiku VLM (planned)',
-          description: "Vision-language model that writes haiku about Japanese ukiyo-e woodblock prints. SigLIP vision encoder + Qwen LLM, LoRA fine-tuned on Met Museum API images.",
+            },},{id: "projects-ukiyo-e-haiku-vlm",
+          title: 'Ukiyo-e Haiku VLM',
+          description: "LLaVA-pattern VLM that writes a haiku for a ukiyo-e print. SigLIP + trained projector + Qwen2.5-3B LoRA, in English and Japanese. SFT did ~95% of the lift; KTO collapsed at default λ_U.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_ukiyoe_vlm/";
             },},{
