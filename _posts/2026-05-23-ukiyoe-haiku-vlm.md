@@ -14,6 +14,8 @@ toc:
 
 Build a vision-language model that looks at a Japanese ukiyo-e woodblock print and writes a 5-7-5 haiku about it. The architecture is the standard LLaVA pattern: frozen SigLIP vision encoder, a small trained projector into the LM embedding space, and a frozen Qwen2.5-3B-Instruct with LoRA adapters. ~36M trainable parameters on a ~3.2B backbone. Trained in both English and Japanese on 3,913 Met Museum prints, then graded by Claude Haiku 4.5 on a 4-axis rubric over a held-out 200-image test set.
 
+**[Try it in the browser →](https://huggingface.co/spaces/MR0b0t/ukiyoe-haiku-vlm-demo)** — upload an image, pick English or Japanese, get a haiku.
+
 Three results worth stating up front. **SFT did ~95% of the lift** — the blind text-only baseline scored 3.28, SFT scored 4.18, and image-grounding (`image_fit`) jumped from 1.69 to 3.80. **Preference optimization only helped where the chosen/rejected gap was real** — English ORPO/KTO with same-model pairs moved nothing; Japanese ORPO with Sonnet-vs-Haiku pairs lifted `image_fit` by +0.27. And **KTO collapsed at its default `λ_U=1.0`**, scoring 3.68 (below SFT) until the undesirable weight was knocked down to 0.1.
 
 ```plotly
@@ -195,4 +197,4 @@ Each published "LoRA adapter" is **1.36 GB**, not the ~30 MB you'd expect from r
 
 The Anthropic spend came in well under estimate: 224×224 images tokenize to ~80 vision tokens (not the 300+ I'd assumed) and haiku outputs are ~30 tokens, so per-call cost was tiny. Wall-clock was dominated by the tier-1 request-per-minute limit, not by tokens or latency.
 
-Code, scripts (English and Japanese variants), and the full lessons writeup: [github.com/debtirthasaha/ukiyoe-haiku-vlm](https://github.com/debtirthasaha/ukiyoe-haiku-vlm). The two models are on Hugging Face — Japanese ORPO (flagship) at [MR0b0t/ukiyoe-haiku-vlm-jp](https://huggingface.co/MR0b0t/ukiyoe-haiku-vlm-jp) and English SFT at [MR0b0t/ukiyoe-haiku-vlm-en](https://huggingface.co/MR0b0t/ukiyoe-haiku-vlm-en).
+Code, scripts (English and Japanese variants), and the full lessons writeup: [github.com/debtirthasaha/ukiyoe-haiku-vlm](https://github.com/debtirthasaha/ukiyoe-haiku-vlm). The two models are on Hugging Face — Japanese ORPO (flagship) at [MR0b0t/ukiyoe-haiku-vlm-jp](https://huggingface.co/MR0b0t/ukiyoe-haiku-vlm-jp) and English SFT at [MR0b0t/ukiyoe-haiku-vlm-en](https://huggingface.co/MR0b0t/ukiyoe-haiku-vlm-en). The interactive demo is at [MR0b0t/ukiyoe-haiku-vlm-demo](https://huggingface.co/spaces/MR0b0t/ukiyoe-haiku-vlm-demo).

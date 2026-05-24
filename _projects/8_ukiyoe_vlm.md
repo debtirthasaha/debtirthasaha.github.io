@@ -8,4 +8,4 @@ category: shipped
 giscus_comments: false
 ---
 
-[Read the writeup]({% post_url 2026-05-23-ukiyoe-haiku-vlm %}).
+[Read the writeup]({% post_url 2026-05-23-ukiyoe-haiku-vlm %}) · [Live demo](https://huggingface.co/spaces/MR0b0t/ukiyoe-haiku-vlm-demo).
