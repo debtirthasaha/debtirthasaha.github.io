@@ -1,20 +1,11 @@
 ---
 layout: page
-title: Ukiyo-e Haiku VLM (planned)
-description: Vision-language model that writes haiku about Japanese ukiyo-e woodblock prints. SigLIP vision encoder + Qwen LLM, LoRA fine-tuned on Met Museum API images.
+title: Ukiyo-e Haiku VLM
+description: LLaVA-pattern VLM that writes a haiku for a ukiyo-e print. SigLIP + trained projector + Qwen2.5-3B LoRA, in English and Japanese. SFT did ~95% of the lift; KTO collapsed at default λ_U.
 img:
 importance: 2
-category: in-progress
+category: shipped
 giscus_comments: false
 ---
 
-Pipeline:
-
-- **Vision encoder.** SigLIP, frozen.
-- **LLM.** Qwen (small), LoRA-adapted.
-- **Bridge.** Projection layer from SigLIP embeddings into Qwen's embedding space.
-- **Data.** Ukiyo-e print images from the Met Museum Open Access API, paired with generated haiku captions.
-
-Phase 2 of a VLM-from-scratch effort. Phase 1 (nanoVLM) is a prerequisite build. Budget: ~$15-25.
-
-Writeup will follow when the model trains.
+[Read the writeup]({% post_url 2026-05-23-ukiyoe-haiku-vlm %}).
