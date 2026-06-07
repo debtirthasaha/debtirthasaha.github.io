@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-a-haiku-vlm-sft-did-the-work-kto-collapsed-at-λ-1-0",
+        },{id: "post-a-vla-from-scratch-29-tokens-0-grasps-and-a-grpo-that-wouldn-39-t-budge",
+        
+          title: "A VLA from scratch: 29% tokens, 0% grasps, and a GRPO that wouldn&#39;t...",
+        
+        description: "Building a vision-language-action model from scratch on LIBERO-Spatial: SigLIP + Qwen2.5-3B, behavior cloning to 29% action-token accuracy but 0% closed-loop success, and a GRPO run that trained cleanly without improving. An honest negative result, plus the six bugs in the way.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/vla-libero-grpo/";
+          
+        },
+      },{id: "post-a-haiku-vlm-sft-did-the-work-kto-collapsed-at-λ-1-0",
         
           title: "A haiku VLM: SFT did the work, KTO collapsed at λ=1.0",
         
