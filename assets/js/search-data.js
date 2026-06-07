@@ -178,6 +178,11 @@ ninja.data = [{
           description: "LLaVA-pattern VLM that writes a haiku for a ukiyo-e print. SigLIP + trained projector + Qwen2.5-3B LoRA, in English and Japanese. SFT did ~95% of the lift; KTO collapsed at default λ_U.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/8_ukiyoe_vlm/";
+            },},{id: "projects-vla-on-libero-spatial-bc-grpo",
+          title: 'VLA on LIBERO-Spatial (BC → GRPO)',
+          description: "Vision-language-action model from scratch: SigLIP + Qwen2.5-3B + action-token head. Behavior cloning to 29% action-token accuracy but 0% closed-loop success; GRPO trained cleanly on a dense reaching reward but stayed flat. An honest negative result with a full bug log.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_vla_libero/";
             },},{
         id: 'social-email',
         title: 'email',
