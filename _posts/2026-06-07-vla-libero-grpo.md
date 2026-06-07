@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A VLA from scratch: 29% tokens, 0% grasps, and a GRPO that wouldn't budge"
-date: 2026-06-07 18:00:00
+date: 2026-06-07 09:00:00
 description: "Building a vision-language-action model from scratch on LIBERO-Spatial: SigLIP + Qwen2.5-3B, behavior cloning to 29% action-token accuracy but 0% closed-loop success, and a GRPO run that trained cleanly without improving. An honest negative result, plus the six bugs in the way."
 tags: vla robotics grpo reinforcement-learning libero
 categories: deep-learning
