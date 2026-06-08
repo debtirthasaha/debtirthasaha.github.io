@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-a-vla-from-scratch-29-tokens-0-grasps-and-a-grpo-that-wouldn-39-t-budge",
+        },{id: "post-stateful-agent-an-agent-that-actually-remembers",
+        
+          title: "stateful-agent: an agent that actually remembers",
+        
+        description: "A from-scratch agent harness built around cross-session memory — a tool-use control loop over a real streaming backend (Kafka, Flink, Redis, Cassandra) with semantic recall and rolling-summary compaction, served as an API.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/stateful-agent/";
+          
+        },
+      },{id: "post-a-vla-from-scratch-29-tokens-0-grasps-and-a-grpo-that-wouldn-39-t-budge",
         
           title: "A VLA from scratch: 29% tokens, 0% grasps, and a GRPO that wouldn&#39;t...",
         
@@ -133,7 +144,12 @@ ninja.data = [{
             window.location.href = "/blog/2026/cpp-to-python-transformer/";
           
         },
-      },{id: "projects-equational-theories-cheatsheet",
+      },{id: "projects-stateful-agent-event-driven-assistant",
+          title: 'stateful-agent (event-driven assistant)',
+          description: "A from-scratch agent harness centered on cross-session memory: a tool-use control loop over a streaming backend (Kafka / Flink / Redis / Cassandra) with semantic recall and rolling-summary compaction, served via FastAPI + Docker.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_stateful_agent/";
+            },},{id: "projects-equational-theories-cheatsheet",
           title: 'Equational theories cheatsheet',
           description: "An 8.71 KB Birkhoff-sound prompt for SAIR&#39;s equational-theories competition (Tao + Davis). A 31B model running this prompt beat a 120B one on the hardest set.",
           section: "Projects",handler: () => {
