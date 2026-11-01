@@ -160,6 +160,11 @@ ninja.data = [{
           description: "A from-scratch agent harness centered on cross-session memory: a tool-use control loop over a streaming backend (Kafka / Flink / Redis / Cassandra) with semantic recall and rolling-summary compaction, served via FastAPI + Docker.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/10_stateful_agent/";
+            },},{id: "projects-tinynnue-edge-int8-inference",
+          title: 'TinyNNUE Edge (int8 inference)',
+          description: "A 769-128-32-1 NNUE-style chess evaluator, post-training-quantized to int8 weights and int32 accumulators and run by a small C++ core with real integer arithmetic. Incremental updates match full recomputation bit for bit; int8 was not faster than fp32 once fp32 sums could vectorize.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_tinynnue_edge/";
             },},{id: "projects-equational-theories-cheatsheet",
           title: 'Equational theories cheatsheet',
           description: "An 8.71 KB Birkhoff-sound prompt for SAIR&#39;s equational-theories competition (Tao + Davis). A 31B model running this prompt beat a 120B one on the hardest set.",
