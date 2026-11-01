@@ -23,7 +23,18 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-stateful-agent-an-agent-that-actually-remembers",
+        },{id: "post-an-int8-nnue-with-exact-incremental-updates-and-why-it-is-not-faster-than-fp32",
+        
+          title: "An int8 NNUE with exact incremental updates, and why it is not faster...",
+        
+        description: "A 769-128-32-1 chess evaluator trained on Stockfish labels, quantized to int8 weights and int32 accumulators, run by a small C++ core with real integer arithmetic. Incremental updates match full recomputation bit for bit; the apparent 7x int8 speedup disappears once fp32 sums may be reassociated; almost all quantization error comes from the first layer.",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2026/tinynnue-edge/";
+          
+        },
+      },{id: "post-stateful-agent-an-agent-that-actually-remembers",
         
           title: "stateful-agent: an agent that actually remembers",
         
