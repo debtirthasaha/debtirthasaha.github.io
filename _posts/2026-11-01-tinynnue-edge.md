@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "An int8 NNUE with exact incremental updates, and why it is not faster than fp32"
-date: 2026-11-01 20:00:00
+date: 2026-11-01 10:00:00
 description: "A 769-128-32-1 chess evaluator trained on Stockfish labels, quantized to int8 weights and int32 accumulators, run by a small C++ core with real integer arithmetic. Incremental updates match full recomputation bit for bit; the apparent 7x int8 speedup disappears once fp32 sums may be reassociated; almost all quantization error comes from the first layer."
 tags: quantization int8 nnue inference cpp
 categories: deep-learning
